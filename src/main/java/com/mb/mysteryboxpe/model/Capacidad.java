@@ -21,6 +21,6 @@ public class Capacidad {
     private String nombre;
 
     @OneToMany(mappedBy = "capacidad")
-    private List<BoxPlantilla> ListaPlantillas;
+    private List<Plantilla> ListaPlantillas;
 
 }

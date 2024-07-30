@@ -20,8 +20,8 @@ public class BoxVenta {
     private String mensaje;
 
     @ManyToOne
-    @JoinColumn(name = "id_boxplantilla")
-    private BoxPlantilla boxPlantilla;
+    @JoinColumn(name = "id_plantilla")
+    private Plantilla plantilla;
 
     @ManyToOne
     @JoinColumn(name = "id_skinbox")

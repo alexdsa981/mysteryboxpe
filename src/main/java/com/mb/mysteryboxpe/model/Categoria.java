@@ -20,7 +20,7 @@ public class Categoria {
     private String nombre;
 
     @OneToMany(mappedBy = "categoria")
-    private List<BoxPlantilla> ListaPlantillas;
+    private List<Plantilla> ListaPlantillas;
     @OneToMany(mappedBy = "categoria")
     private List<Producto> ListaProductos;
 

@@ -11,13 +11,13 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @Entity
-public class BoxPlantilla {
+public class Plantilla {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombrePlantilla;
+    private String nombre;
     private Double precio;
 
     @ManyToOne
@@ -27,7 +27,7 @@ public class BoxPlantilla {
     @JoinColumn(name = "id_categoria")
     private Categoria categoria;
 
-    @OneToMany(mappedBy = "boxPlantilla")
+    @OneToMany(mappedBy = "plantilla")
     private List<BoxVenta> ListaBoxVenta;
 
 }
