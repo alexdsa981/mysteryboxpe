@@ -3,7 +3,7 @@ package com.mb.mysteryboxpe.controller;
 import com.mb.mysteryboxpe.dto.CapacidadRecord;
 import com.mb.mysteryboxpe.dto.CategoriaRecord;
 import com.mb.mysteryboxpe.dto.PlantillaRecord;
-import com.mb.mysteryboxpe.dto.crearPlantillaRecord;
+import com.mb.mysteryboxpe.dto.CrearPlantillaRecord;
 import com.mb.mysteryboxpe.model.Capacidad;
 import com.mb.mysteryboxpe.model.Categoria;
 import com.mb.mysteryboxpe.model.Plantilla;
@@ -37,7 +37,7 @@ public class PlantillaController {
 
     //CREATE
     @PostMapping
-    public ResponseEntity<PlantillaRecord> crearPlantilla(@RequestBody crearPlantillaRecord crearPlantillaRecord) {
+    public ResponseEntity<PlantillaRecord> crearPlantilla(@RequestBody CrearPlantillaRecord crearPlantillaRecord) {
 
         Capacidad capacidad = capacidadRepository.findById(crearPlantillaRecord.idCapacidad()).orElseThrow();
         Categoria categoria = categoriaRepository.findById(crearPlantillaRecord.idCategoria()).orElseThrow();
@@ -92,7 +92,7 @@ public class PlantillaController {
 
     //UPDATE
     @PutMapping("/{id}")
-    public ResponseEntity<PlantillaRecord> actualizarPlantilla(@PathVariable Long id, @RequestBody crearPlantillaRecord actualizarPlantillaRecord) {
+    public ResponseEntity<PlantillaRecord> actualizarPlantilla(@PathVariable Long id, @RequestBody CrearPlantillaRecord actualizarPlantillaRecord) {
 
         Plantilla plantilla = plantillaRepository.findById(id).orElse(null);
         if (plantilla == null) {
